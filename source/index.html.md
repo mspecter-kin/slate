@@ -27,6 +27,7 @@ you can switch the programming language of the examples with the tabs in the top
 Purrfect API expects the username and password key to be included in all API requests:
 
 `Username: sdet_challenge`
+
 `Password: wackySumm3r`
 
 <aside class="notice">
@@ -40,13 +41,13 @@ All you requests should use the provided basic authorization!
 ```ruby
 require 'net/http'
 
-Net::HTTP.get(URI('http://example.com:3000/api/v1/pet_registrations'))
+Net::HTTP.get(URI('https://sdet-challenge.herokuapp.com/api/v1/pet_registrations'))
 ```
 
 ```javascript
 const axios = require('axios');
 
-axios.get('http://example.com:3000/api/v1/pet_registrations')
+axios.get('https://sdet-challenge.herokuapp.com/api/v1/pet_registrations')
   .then(response => {
     console.log(response.data);
     console.log(response);
@@ -94,7 +95,7 @@ This endpoint retrieves all pet registrations
 
 ### HTTP Request
 
-`GET http://example.com/api/v1/pet_registrations`
+`GET https://sdet-challenge.herokuapp.com/api/v1/pet_registrations`
 
 ### Success Code
 
@@ -107,13 +108,13 @@ This endpoint retrieves all pet registrations
 ```ruby
 require 'net/http'
 
-Net::HTTP.get(URI('http://example.com/api/v1/pet_registrations/2'))
+Net::HTTP.get(URI('https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/2'))
 ```
 
 ```javascript
 const axios = require('axios');
 
-axios.get('http://example.com:3000/api/v1/pet_registrations/2')
+axios.get('https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/2')
   .then(response => {
     console.log(response.data);
     console.log(response);
@@ -145,7 +146,7 @@ This endpoint retrieves a specific registration.
 
 ### HTTP Request
 
-`GET http://example.com/api/v1/pet_registrations/<ID>
+`GET https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/<ID>
 `
 ### URL Parameters
 
@@ -165,7 +166,7 @@ ID | The ID of the registration to retrieve
 require 'net/http'
 require 'JSON'
 
-Net::HTTP.post  URI('http://example.com:3000/api/v1/pet_registrations'),
+Net::HTTP.post  URI('https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/api/v1/pet_registrations'),
                 {
                   "pet_name"=> "Storm",
                   "pet_owner"=> "Mike",
@@ -183,7 +184,7 @@ Net::HTTP.post  URI('http://example.com:3000/api/v1/pet_registrations'),
 ```javascript
 const axios = require('axios');
 
-axios.post('http://example.com/api/v1/pet_registrations', {
+axios.post('https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/api/v1/pet_registrations', {
   "pet_name": "Storm", "pet_owner": "Mike", "color": "brown", "description": "a nice warm cat",
   "age": 2, "species": "dog", "vaccination_status": true, "membership": true, "services": ["vitamins", "bath"]
 })
@@ -222,7 +223,7 @@ This endpoint deletes a specific registration.
 
 ### HTTP Request
 
-`DELETE http://example.com/api/vq/<ID>`
+`DELETE https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/api/vq/<ID>`
 
 ### URL Parameters
 
@@ -243,7 +244,7 @@ ID | The ID of the registration to delete
 ```ruby
 require 'net/http'
 
-Net::HTTP.new('example.com', 3000).delete('/api/v1/pet_registrations/4')
+Net::HTTP.new('https://sdet-challenge.herokuapp.com').delete('/api/v1/pet_registrations/4')
 ```
 
 ```javascript
@@ -270,7 +271,7 @@ This endpoint deletes a specific registration.
 
 ### HTTP Request
 
-`DELETE http://example.com/api/vq/<ID>`
+`DELETE https://sdet-challenge.herokuapp.com/api/vq/<ID>`
 
 ### URL Parameters
 
@@ -291,7 +292,7 @@ ID | The ID of the registration to delete
 require 'net/http'
 require 'JSON'
 
-Net::HTTP.new('localhost', 3000).put('/api/v1/pet_registrations/5',
+Net::HTTP.new('https://sdet-challenge.herokuapp.com').put('/api/v1/pet_registrations/5',
                                      {"pet_name"=> "wolfie"}.to_json,
                                      "Content-Type" => "application/json")
 
@@ -300,7 +301,7 @@ Net::HTTP.new('localhost', 3000).put('/api/v1/pet_registrations/5',
 ```javascript
 const axios = require('axios');
 
-axios.put('http://example.com/api/v1/pet_registrations/5',{
+axios.put('https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/5',{
     "pet_name": "wolfie"
     })
   .then(response => {
@@ -338,7 +339,7 @@ This endpoint deletes a specific registration.
 
 ### HTTP Request
 
-`PUT http://example.com/api/v1/pet_registrations/<ID>`
+`PUT https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/<ID>`
 
 ### URL Parameters
 

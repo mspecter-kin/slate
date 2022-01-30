@@ -353,18 +353,19 @@ you can switch the programming language of the examples with the tabs in the top
 <h1 id='authentication'>Authentication</h1>
 <p>Purrfect API expects the username and password key to be included in all API requests:</p>
 
-<p><code>Username: sdet_challenge</code>
-<code>Password: wackySumm3r</code></p>
+<p><code>Username: sdet_challenge</code></p>
+
+<p><code>Password: wackySumm3r</code></p>
 
 <aside class="notice">
 All you requests should use the provided basic authorization!
 </aside>
 <h1 id='purrfect-api'>Purrfect API</h1><h2 id='get-all-registrations'>Get All Registrations</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'net/http'</span>
 
-<span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="no">URI</span><span class="p">(</span><span class="s1">'http://example.com:3000/api/v1/pet_registrations'</span><span class="p">))</span>
+<span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="no">URI</span><span class="p">(</span><span class="s1">'https://sdet-challenge.herokuapp.com/api/v1/pet_registrations'</span><span class="p">))</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">axios</span><span class="dl">'</span><span class="p">);</span>
 
-<span class="nx">axios</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://example.com:3000/api/v1/pet_registrations</span><span class="dl">'</span><span class="p">)</span>
+<span class="nx">axios</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://sdet-challenge.herokuapp.com/api/v1/pet_registrations</span><span class="dl">'</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
@@ -407,17 +408,17 @@ All you requests should use the provided basic authorization!
 </span></code></pre></div>
 <p>This endpoint retrieves all pet registrations</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/v1/pet_registrations</code></p>
+<p><code>GET https://sdet-challenge.herokuapp.com/api/v1/pet_registrations</code></p>
 <h3 id='success-code'>Success Code</h3>
 <aside class="success">
 200
 </aside>
 <h2 id='get-a-specific-registration'>Get a Specific Registration</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'net/http'</span>
 
-<span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="no">URI</span><span class="p">(</span><span class="s1">'http://example.com/api/v1/pet_registrations/2'</span><span class="p">))</span>
+<span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="no">URI</span><span class="p">(</span><span class="s1">'https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/2'</span><span class="p">))</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">axios</span><span class="dl">'</span><span class="p">);</span>
 
-<span class="nx">axios</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://example.com:3000/api/v1/pet_registrations/2</span><span class="dl">'</span><span class="p">)</span>
+<span class="nx">axios</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/2</span><span class="dl">'</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
@@ -445,7 +446,7 @@ All you requests should use the provided basic authorization!
 </span></code></pre></div>
 <p>This endpoint retrieves a specific registration.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/api/v1/pet_registrations/&lt;ID&gt;
+<p><code>GET https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/&lt;ID&gt;
 </code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
@@ -466,7 +467,7 @@ All you requests should use the provided basic authorization!
 <h2 id='create-a-registration'>Create a Registration</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'net/http'</span>
 <span class="nb">require</span> <span class="s1">'JSON'</span>
 
-<span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">post</span>  <span class="no">URI</span><span class="p">(</span><span class="s1">'http://example.com:3000/api/v1/pet_registrations'</span><span class="p">),</span>
+<span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">post</span>  <span class="no">URI</span><span class="p">(</span><span class="s1">'https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/api/v1/pet_registrations'</span><span class="p">),</span>
                 <span class="p">{</span>
                   <span class="s2">"pet_name"</span><span class="o">=&gt;</span> <span class="s2">"Storm"</span><span class="p">,</span>
                   <span class="s2">"pet_owner"</span><span class="o">=&gt;</span> <span class="s2">"Mike"</span><span class="p">,</span>
@@ -481,7 +482,7 @@ All you requests should use the provided basic authorization!
                 <span class="s2">"Content-Type"</span> <span class="o">=&gt;</span> <span class="s2">"application/json"</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">axios</span><span class="dl">'</span><span class="p">);</span>
 
-<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://example.com/api/v1/pet_registrations</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/api/v1/pet_registrations</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
   <span class="dl">"</span><span class="s2">pet_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Storm</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">pet_owner</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Mike</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">color</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">brown</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">description</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">a nice warm cat</span><span class="dl">"</span><span class="p">,</span>
   <span class="dl">"</span><span class="s2">age</span><span class="dl">"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="dl">"</span><span class="s2">species</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">dog</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">vaccination_status</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="dl">"</span><span class="s2">membership</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="dl">"</span><span class="s2">services</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">vitamins</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">bath</span><span class="dl">"</span><span class="p">]</span>
 <span class="p">})</span>
@@ -516,7 +517,7 @@ All you requests should use the provided basic authorization!
 </span></code></pre></div>
 <p>This endpoint deletes a specific registration.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/api/vq/&lt;ID&gt;</code></p>
+<p><code>DELETE https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/api/vq/&lt;ID&gt;</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -535,7 +536,7 @@ All you requests should use the provided basic authorization!
 </aside>
 <h2 id='delete-a-specific-registration'>Delete a Specific Registration</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'net/http'</span>
 
-<span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">'example.com'</span><span class="p">,</span> <span class="mi">3000</span><span class="p">).</span><span class="nf">delete</span><span class="p">(</span><span class="s1">'/api/v1/pet_registrations/4'</span><span class="p">)</span>
+<span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">'https://sdet-challenge.herokuapp.com'</span><span class="p">).</span><span class="nf">delete</span><span class="p">(</span><span class="s1">'/api/v1/pet_registrations/4'</span><span class="p">)</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">axios</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="nx">axios</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://example.com/api/v1/pet_registrations/17</span><span class="dl">'</span><span class="p">)</span>
@@ -555,7 +556,7 @@ All you requests should use the provided basic authorization!
 </span></code></pre></div>
 <p>This endpoint deletes a specific registration.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>DELETE http://example.com/api/vq/&lt;ID&gt;</code></p>
+<p><code>DELETE https://sdet-challenge.herokuapp.com/api/vq/&lt;ID&gt;</code></p>
 <h3 id='url-parameters-3'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -575,13 +576,13 @@ All you requests should use the provided basic authorization!
 <h2 id='update-a-specific-registration'>Update a Specific Registration</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'net/http'</span>
 <span class="nb">require</span> <span class="s1">'JSON'</span>
 
-<span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">'localhost'</span><span class="p">,</span> <span class="mi">3000</span><span class="p">).</span><span class="nf">put</span><span class="p">(</span><span class="s1">'/api/v1/pet_registrations/5'</span><span class="p">,</span>
+<span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">'https://sdet-challenge.herokuapp.com'</span><span class="p">).</span><span class="nf">put</span><span class="p">(</span><span class="s1">'/api/v1/pet_registrations/5'</span><span class="p">,</span>
                                      <span class="p">{</span><span class="s2">"pet_name"</span><span class="o">=&gt;</span> <span class="s2">"wolfie"</span><span class="p">}.</span><span class="nf">to_json</span><span class="p">,</span>
                                      <span class="s2">"Content-Type"</span> <span class="o">=&gt;</span> <span class="s2">"application/json"</span><span class="p">)</span>
 
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">axios</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">axios</span><span class="dl">'</span><span class="p">);</span>
 
-<span class="nx">axios</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://example.com/api/v1/pet_registrations/5</span><span class="dl">'</span><span class="p">,{</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/5</span><span class="dl">'</span><span class="p">,{</span>
     <span class="dl">"</span><span class="s2">pet_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">wolfie</span><span class="dl">"</span>
     <span class="p">})</span>
   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -615,7 +616,7 @@ All you requests should use the provided basic authorization!
 </span></code></pre></div>
 <p>This endpoint deletes a specific registration.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>PUT http://example.com/api/v1/pet_registrations/&lt;ID&gt;</code></p>
+<p><code>PUT https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/&lt;ID&gt;</code></p>
 <h3 id='url-parameters-4'>URL Parameters</h3>
 <table><thead>
 <tr>
