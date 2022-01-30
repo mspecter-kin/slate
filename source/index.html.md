@@ -16,12 +16,22 @@ meta:
 
 # Introduction
 
-
 Welcome to the Purrfect API! You can use our API to access Purrfect API endpoints, which can get information on
 pet registrations in our database.
 
 We have language bindings in Ruby and JavaScript! You can view code examples in the dark area to the right, and
 you can switch the programming language of the examples with the tabs in the top right.
+
+# Authentication
+
+Purrfect API expects the username and password key to be included in all API requests:
+
+`Username: sdet_challenge`
+`Password: wackySumm3r`
+
+<aside class="notice">
+All you requests should use the provided basic authorization!
+</aside>
 
 # Purrfect API
 
@@ -137,17 +147,17 @@ This endpoint retrieves a specific registration.
 
 `GET http://example.com/api/v1/pet_registrations/<ID>
 `
-### Success Code
-
-<aside class="success">
-200
-</aside>
-
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
 ID | The ID of the registration to retrieve
+
+### Success Code
+
+<aside class="success">
+200
+</aside>
 
 ## Create a Registration
 
