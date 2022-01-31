@@ -223,7 +223,7 @@ This endpoint deletes a specific registration.
 
 ### HTTP Request
 
-`DELETE https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/api/vq/<ID>`
+`DELETE https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/api/v1/<ID>`
 
 ### URL Parameters
 
@@ -271,7 +271,7 @@ This endpoint deletes a specific registration.
 
 ### HTTP Request
 
-`DELETE https://sdet-challenge.herokuapp.com/api/vq/<ID>`
+`DELETE https://sdet-challenge.herokuapp.com/api/v1/<ID>`
 
 ### URL Parameters
 
