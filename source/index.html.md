@@ -219,17 +219,25 @@ axios.post('https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/api/v1
 }
 ```
 
-This endpoint deletes a specific registration.
+This endpoint creates a specific registration.
 
 ### HTTP Request
 
-`POST https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/api/v1/<ID>`
+`POST https://sdet-challenge.herokuapp.com/api/v1/pet_registrations`
 
 ### URL Parameters
 
-Parameter | Description
---------- | -----------
-ID | The ID of the registration to delete
+Parameter | Type | Notes
+--------- | ----------- | -----------
+pet_name | string | The name of the pet, should be unique and between 2-30 characters
+pet_owner | string | Name of the pet owner
+color | string | Color of the pet. Valid colors: black, white, red, green, yellow, blue, grey, brown, orange, purple
+description | string | Description of pet. Should contain between 10-100 characters
+age | integer | Age of pet. A valid age should be: age >= 0
+species | string | The species of the pet. Valid species accepted at Purrfect are: cat, dog, bunny, hamster, chicken, duck, parrot
+vaccination_status | boolean | Whether the vaccinations of the pet are up to date. Valid inputs are true or false
+membership | boolean | 	Name the membership of the pet is active. Valid inputs are true or false
+services | array of strings	 | The services requested on next visit to Purrfect. Valid services accepted are: bath, brushing, clipping, massage, vitamins, spa, walk
 
 
 ### Success Code

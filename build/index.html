@@ -515,19 +515,61 @@ All you requests should use the provided basic authorization!
   </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-01-25T20:11:11.423Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
-<p>This endpoint deletes a specific registration.</p>
+<p>This endpoint creates a specific registration.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>POST https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/api/v1/&lt;ID&gt;</code></p>
+<p><code>POST https://sdet-challenge.herokuapp.com/api/v1/pet_registrations</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Description</th>
+<th>Type</th>
+<th>Notes</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the registration to delete</td>
+<td>pet_name</td>
+<td>string</td>
+<td>The name of the pet, should be unique and between 2-30 characters</td>
+</tr>
+<tr>
+<td>pet_owner</td>
+<td>string</td>
+<td>Name of the pet owner</td>
+</tr>
+<tr>
+<td>color</td>
+<td>string</td>
+<td>Color of the pet. Valid colors: black, white, red, green, yellow, blue, grey, brown, orange, purple</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>Description of pet. Should contain between 10-100 characters</td>
+</tr>
+<tr>
+<td>age</td>
+<td>integer</td>
+<td>Age of pet. A valid age should be: age &gt;= 0</td>
+</tr>
+<tr>
+<td>species</td>
+<td>string</td>
+<td>The species of the pet. Valid species accepted at Purrfect are: cat, dog, bunny, hamster, chicken, duck, parrot</td>
+</tr>
+<tr>
+<td>vaccination_status</td>
+<td>boolean</td>
+<td>Whether the vaccinations of the pet are up to date. Valid inputs are true or false</td>
+</tr>
+<tr>
+<td>membership</td>
+<td>boolean</td>
+<td>Name the membership of the pet is active. Valid inputs are true or false</td>
+</tr>
+<tr>
+<td>services</td>
+<td>array of strings</td>
+<td>The services requested on next visit to Purrfect. Valid services accepted are: bath, brushing, clipping, massage, vitamins, spa, walk</td>
 </tr>
 </tbody></table>
 <h3 id='success-code-3'>Success Code</h3>
@@ -556,7 +598,7 @@ All you requests should use the provided basic authorization!
 </span></code></pre></div>
 <p>This endpoint deletes a specific registration.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>DELETE https://sdet-challenge.herokuapp.com/api/v1/&lt;ID&gt;</code></p>
+<p><code>DELETE https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/&lt;ID&gt;</code></p>
 <h3 id='url-parameters-3'>URL Parameters</h3>
 <table><thead>
 <tr>
