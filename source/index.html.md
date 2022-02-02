@@ -166,7 +166,7 @@ ID | The ID of the registration to retrieve
 require 'net/http'
 require 'JSON'
 
-Net::HTTP.post  URI('https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/api/v1/pet_registrations'),
+Net::HTTP.post  URI('https://sdet-challenge.herokuapp.com/api/v1/pet_registrations'),
                 {
                   "pet_name"=> "Storm",
                   "pet_owner"=> "Mike",
@@ -223,7 +223,7 @@ This endpoint deletes a specific registration.
 
 ### HTTP Request
 
-`DELETE https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/api/v1/<ID>`
+`POST https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/api/v1/<ID>`
 
 ### URL Parameters
 
@@ -271,7 +271,7 @@ This endpoint deletes a specific registration.
 
 ### HTTP Request
 
-`DELETE https://sdet-challenge.herokuapp.com/api/v1/<ID>`
+`DELETE https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/<ID>`
 
 ### URL Parameters
 

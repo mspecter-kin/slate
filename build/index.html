@@ -467,7 +467,7 @@ All you requests should use the provided basic authorization!
 <h2 id='create-a-registration'>Create a Registration</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'net/http'</span>
 <span class="nb">require</span> <span class="s1">'JSON'</span>
 
-<span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">post</span>  <span class="no">URI</span><span class="p">(</span><span class="s1">'https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/api/v1/pet_registrations'</span><span class="p">),</span>
+<span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">post</span>  <span class="no">URI</span><span class="p">(</span><span class="s1">'https://sdet-challenge.herokuapp.com/api/v1/pet_registrations'</span><span class="p">),</span>
                 <span class="p">{</span>
                   <span class="s2">"pet_name"</span><span class="o">=&gt;</span> <span class="s2">"Storm"</span><span class="p">,</span>
                   <span class="s2">"pet_owner"</span><span class="o">=&gt;</span> <span class="s2">"Mike"</span><span class="p">,</span>
@@ -517,7 +517,7 @@ All you requests should use the provided basic authorization!
 </span></code></pre></div>
 <p>This endpoint deletes a specific registration.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/api/v1/&lt;ID&gt;</code></p>
+<p><code>POST https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/api/v1/&lt;ID&gt;</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
