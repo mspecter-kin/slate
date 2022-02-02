@@ -518,10 +518,10 @@ All you requests should use the provided basic authorization!
 <p>This endpoint creates a specific registration.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>POST https://sdet-challenge.herokuapp.com/api/v1/pet_registrations</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<h3 id='body-attributes'>Body Attributes</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Attribute</th>
 <th>Type</th>
 <th>Notes</th>
 </tr>
@@ -599,7 +599,7 @@ All you requests should use the provided basic authorization!
 <p>This endpoint deletes a specific registration.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>DELETE https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-3'>URL Parameters</h3>
+<h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -659,7 +659,7 @@ All you requests should use the provided basic authorization!
 <p>This endpoint deletes a specific registration.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
 <p><code>PUT https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-4'>URL Parameters</h3>
+<h3 id='url-parameter'>URL Parameter</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -668,9 +668,14 @@ All you requests should use the provided basic authorization!
 </thead><tbody>
 <tr>
 <td>ID</td>
-<td>The ID of the registration to delete</td>
+<td>The ID of the registration to update</td>
 </tr>
 </tbody></table>
+<h3 id='body-attributes-2'>Body attributes</h3>
+<aside class="notice">
+Any attribute you want to update, please check available attributes
+in <code>Create</code>
+</aside>
 <h3 id='success-code-5'>Success Code</h3>
 <aside class="success">
 204

@@ -225,9 +225,9 @@ This endpoint creates a specific registration.
 
 `POST https://sdet-challenge.herokuapp.com/api/v1/pet_registrations`
 
-### URL Parameters
+### Body Attributes
 
-Parameter | Type | Notes
+Attribute | Type | Notes
 --------- | ----------- | -----------
 pet_name | string | The name of the pet, should be unique and between 2-30 characters
 pet_owner | string | Name of the pet owner
@@ -349,11 +349,20 @@ This endpoint deletes a specific registration.
 
 `PUT https://sdet-challenge.herokuapp.com/api/v1/pet_registrations/<ID>`
 
-### URL Parameters
+### URL Parameter
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the registration to delete
+ID | The ID of the registration to update
+
+### Body attributes
+
+<aside class="notice">
+Any attribute you want to update, please check available attributes
+in <code>Create</code>
+</aside>
+
+
 
 ### Success Code
 
