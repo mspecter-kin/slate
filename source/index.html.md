@@ -367,5 +367,5 @@ in <code>Create</code>
 ### Success Code
 
 <aside class="success">
-204
+200
 </aside>
